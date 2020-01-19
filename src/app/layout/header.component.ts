@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
+
 @Component({
   selector: 'app-header',
   template: `
   <!-- Header -->
-  <div class="col-12 border border-primary  ">
+  <div class="col-12 border border-primary bg-secondary rounded ">
     <div class="row justify-content-start">
       <div class="col-5 justify-content-start"><a class="navbar-brand " href="#">Logo</a></div>
       <div class="col-7 mt-2 ">
@@ -12,7 +13,7 @@ import { Component, OnInit } from '@angular/core';
       </div>
     </div>
     
-    <div>
+    <div >
       <ul class="nav offset-3 justify-content-end">
       <li></li>
       <li class="nav-item">
