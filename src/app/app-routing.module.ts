@@ -6,10 +6,10 @@ import { AdminComponent } from './admin/admin.component';
 import { ManagerComponent } from './manager/manager.component';
 import { LoginComponent } from './login/login.component';
 
+
 const routes: Routes = [
 
-  {path:"", component: AppComponent},
-  {path:"login", component: LoginComponent},
+  {path:"", pathMatch:'full', component: LoginComponent},
   {path:"employee", component: EmployeeComponent},
   {path:"admin", component : AdminComponent},
   {path:"manager", component : ManagerComponent}
