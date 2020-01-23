@@ -8,8 +8,7 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './layout/header.component';
 import { SideBarComponent } from './layout/side-bar.component';
 import { FooterComponent } from './layout/footer.component';
-
-
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -24,7 +23,8 @@ import { FooterComponent } from './layout/footer.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule
   ],
   providers: [UserService],
   bootstrap: [AppComponent]

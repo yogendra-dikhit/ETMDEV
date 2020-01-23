@@ -31,6 +31,7 @@ export class AdminComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    console.log(sessionStorage.getItem("userName"));
   }
 
 }

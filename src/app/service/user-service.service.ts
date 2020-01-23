@@ -1,7 +1,8 @@
 import { User } from './../model/user';
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { HttpClient, HttpHeaders, HttpResponse } from '@angular/common/http';
+import { Observable , throwError  } from 'rxjs';
+import { retry, catchError } from 'rxjs/operators';
 
 @Injectable()
 export class UserService {
@@ -15,14 +16,15 @@ export class UserService {
 
 
 
-  public login ( user: User) :Observable<any> {
+  public login ( user: User) :Observable<string> {
     const httpOptions = {
       headers: new HttpHeaders({
         'Content-Type':  'application/json'
       })
   };
-       return this.http.post<any>(this.URL + "/login",user,httpOptions);
+       return this.http.post<string>(this.URL + "login",user,httpOptions);
        
        
       }
+      errorHandle(error){return throwError("errorMessage");}
 }
