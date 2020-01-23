@@ -29,12 +29,14 @@ export class LoginComponent implements OnInit {
 
          if( this.logged.roleName === "Admin" ){
            console.log(this.logged.empId);
-          sessionStorage.setItem("userName", JSON.stringify( this.logged.empId ));
+          sessionStorage.setItem("userName", JSON.stringify( this.logged.roleName ));
           
            this.router.navigate(['/admin']);
          }else if( this.logged.roleName === "Manager" ){
+          sessionStorage.setItem("userName", JSON.stringify( this.logged.roleName ));
            this.router.navigate(['/manager']);
          }else if( this.logged.roleName === "Employee"){
+          sessionStorage.setItem("userName", JSON.stringify( this.logged.roleName ));
            this.router.navigate(['/employee']);
          }
          //sessionStorage.setItem("userName",this.logged.userName);

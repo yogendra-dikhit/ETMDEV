@@ -10,6 +10,7 @@ import { LoginComponent } from './login/login.component';
 const routes: Routes = [
 
   {path:"", pathMatch:'full', component: LoginComponent},
+  {path:"login", component: LoginComponent},
   {path:"employee", component: EmployeeComponent},
   {path:"admin", component : AdminComponent},
   {path:"manager", component : ManagerComponent}
@@ -19,5 +20,7 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule { 
+  
+}
 export const routeComponents = [LoginComponent,EmployeeComponent,AdminComponent,ManagerComponent];
