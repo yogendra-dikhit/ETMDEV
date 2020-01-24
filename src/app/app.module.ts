@@ -9,6 +9,7 @@ import { HeaderComponent } from './layout/header.component';
 import { SideBarComponent } from './layout/side-bar.component';
 import { FooterComponent } from './layout/footer.component';
 import { RouterModule } from '@angular/router';
+import { AssignProjectComponent } from './manager/assign-project/assign-project.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { RouterModule } from '@angular/router';
     SideBarComponent,
     FooterComponent,
     routeComponents,
+    AssignProjectComponent,
 
   ],
   imports: [

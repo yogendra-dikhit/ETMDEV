@@ -1,8 +1,8 @@
 import { User } from './../model/user';
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders, HttpResponse } from '@angular/common/http';
-import { Observable , throwError  } from 'rxjs';
-import { retry, catchError } from 'rxjs/operators';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Observable  } from 'rxjs';
+
 
 @Injectable()
 export class UserService {
@@ -14,8 +14,6 @@ export class UserService {
     this.URL = "http://localhost:8080/";
    }
 
-
-
   public login ( user: User) :Observable<string> {
     const httpOptions = {
       headers: new HttpHeaders({
@@ -26,5 +24,5 @@ export class UserService {
        
        
       }
-      errorHandle(error){return throwError("errorMessage");}
+
 }
