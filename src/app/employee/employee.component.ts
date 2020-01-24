@@ -4,9 +4,15 @@ import { ActivatedRoute , Router } from '@angular/router';
 @Component({
   selector: 'app-employee',
   template: `
-    <p>
-      employee works!
-    </p>
+  <!-- Header -->
+  <app-side-bar ></app-side-bar>
+  <app-header ></app-header>
+<div class="row" style="margin-left: +250px;">
+<p>Welcome:{{userName}}</p>
+</div>
+
+<app-footer></app-footer>
+ 
   `,
   styles: []
 })
@@ -16,7 +22,7 @@ export class EmployeeComponent implements OnInit {
 
   ngOnInit() {
     console.log(sessionStorage.getItem("userName"));
-    if( !(sessionStorage.getItem("userName") === "Manager") ){
+    if( !( JSON.parse( sessionStorage.getItem("userName") ) === "Employee") ){
       this.router.navigate(['/login']);
     }
   }
