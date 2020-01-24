@@ -3,10 +3,14 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { ManagerComponent } from './manager/manager.component';
+import { LeaveComponent } from './manager/leave/leave.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ManagerComponent,
+    LeaveComponent
   ],
   imports: [
     BrowserModule,
