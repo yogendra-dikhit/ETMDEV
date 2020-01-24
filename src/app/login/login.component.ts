@@ -32,7 +32,7 @@ export class LoginComponent implements OnInit {
           sessionStorage.setItem("userName", JSON.stringify( this.logged.empId ));
           
            this.router.navigate(['/admin']);
-         }else if( this.logged.roleName === "Manager" ){
+         }else if( this.logged.roleName === "Manager"){
            this.router.navigate(['/manager']);
          }else if( this.logged.roleName === "Employee"){
            this.router.navigate(['/employee']);
