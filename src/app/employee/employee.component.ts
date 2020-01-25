@@ -3,28 +3,24 @@ import { ActivatedRoute , Router } from '@angular/router';
 
 @Component({
   selector: 'app-employee',
-  template: `
-  <!-- Header -->
-  <app-side-bar ></app-side-bar>
-  <app-header ></app-header>
-<div class="row" style="margin-left: +250px;">
-<p>Welcome:{{userName}}</p>
-</div>
-
-<app-footer></app-footer>
- 
-  `,
+  templateUrl: './employee.component.html',
   styles: []
 })
 export class EmployeeComponent implements OnInit {
+  
+  public userName : string ;
 
   constructor(private route:ActivatedRoute,private router:Router) { }
 
   ngOnInit() {
-    console.log(sessionStorage.getItem("userName"));
-    if( !( JSON.parse( sessionStorage.getItem("userName") ) === "Employee") ){
+    if( localStorage.length > 0 ){
+      sessionStorage.setItem("userName",JSON.stringify(localStorage.getItem("loginRole")));
+      
+    }else if( !( JSON.parse( sessionStorage.getItem("userName")) === "Employee") ){
       this.router.navigate(['/login']);
+
     }
+    this.userName = JSON.parse( sessionStorage.getItem("userName"));
   }
 
 }

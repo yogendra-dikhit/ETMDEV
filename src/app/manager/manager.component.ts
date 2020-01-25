@@ -13,10 +13,10 @@ export class ManagerComponent implements OnInit {
   ngOnInit() {
      
 
-    // if( !(JSON.parse( localStorage.getItem("logged")).roleName === "Manager") ){
-    //   this.router.navigate(['/login']);
-    // }else  
-    if( !( JSON.parse( sessionStorage.getItem("userName")) === "Manager") ){
+    if( localStorage.length > 0 ){
+      sessionStorage.setItem("userName",JSON.stringify(localStorage.getItem("loginRole")));
+      
+    }else if( !( JSON.parse( sessionStorage.getItem("userName")) === "Manager") ){
       this.router.navigate(['/login']);
 
     }
