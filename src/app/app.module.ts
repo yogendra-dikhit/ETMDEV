@@ -13,6 +13,7 @@ import { AssignProjectComponent } from './manager/assign-project/assign-project.
 import { AddComponent } from './admin/add/add.component';
 import { ErrorPageComponent } from './error-page/error-page.component';
 import { LeaveComponent } from './manager/leave/leave.component';
+import { AssignModuleComponent } from './manager/assign-module/assign-module.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { LeaveComponent } from './manager/leave/leave.component';
     AddComponent,
     ErrorPageComponent,
     LeaveComponent,
+    AssignModuleComponent,
 
   ],
   imports: [

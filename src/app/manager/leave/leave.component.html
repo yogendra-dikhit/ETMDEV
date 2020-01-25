@@ -1,1 +1,41 @@
-<p>leave works!</p>
+<app-header></app-header>
+<div class="container mb-2 mt-2">
+    <div class="row text-dark" style="display: grid; justify-content: center;"> <h2> Leave </h2></div>
+    <div class="container  ">
+      <div id="leave-row" class="row justify-content-center align-items-center" >
+          <div id="leave-column" class="col-md-6" style="background-color: snow">
+              <div id="leave-box" class="col-md-12" style="background-color: snow;">
+                  <form id="leave-form" class="form" action="" method="post">
+                   
+                      <div class="form-group">
+                          <label for="leaveid" class="text  h5">from</label><br>
+                          <input type="text" name="leaveid" id="leaveid" class="form-control" >
+                      </div>
+                      
+                      <div class="form-group">
+                        <label for="from" class="text h5">Project-description</label><br>
+                        <input type="text" name="from" id="from" class="form-control" >
+                    </div>
+
+                      <div class="form-group">
+                          <label for="to" class="text h5">Start date</label><br>
+                          <input type="text" name="to" id="to" class="form-control"  placeholder="dd/mm/yyyy" >
+                      </div>
+  
+                      <div class="form-group">
+                        <label for="employeeId" class="text h5">End date</label><br>
+                        <input type="text" name="employeeId" id="employeeId" class="form-control"placeholder="dd/mm/yyyy"  >
+                      </div>
+                      
+                    <div class="form-group" style="display: grid; justify-content: center;">
+                      <input type="submit" name="next" class="btn btn-success btn-md   " value="Next">
+                   
+                    </div>
+                      </form>
+                      
+                      </div>
+                      </div>
+                      </div>
+    </div>
+</div>
+    
