@@ -24,7 +24,10 @@ export class SideBarComponent implements OnInit {
 
   constructor() { }
 
+  public userName : string;
+  public  list :string [];
   ngOnInit() {
+    this.userName = JSON.parse( sessionStorage.getItem("userName"));
   }
 
 }

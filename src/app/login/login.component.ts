@@ -16,7 +16,7 @@ export class LoginComponent implements OnInit {
   private userPassword : string;
   private checkbox : boolean;
 
-  private logged :any = undefined;
+  private logged :any ;
   constructor(private userService: UserService , private route:ActivatedRoute,private router:Router) { }
 
   ngOnInit() {
@@ -24,25 +24,25 @@ export class LoginComponent implements OnInit {
     this.userName = undefined;
     this.userPassword = undefined;
     this.checkbox = undefined;
+    this.logged = undefined;
 
     //sessionStorage.clear();
     
     if( sessionStorage.length > 0 || localStorage.length > 0 ){
       if( (JSON.parse( sessionStorage.getItem("userName") ) === "Manager") 
-      // || JSON.parse( localStorage.getItem("logged")).roleName === "Manager"
+       || localStorage.length > 0
       ){
-        //console.log(typeof( JSON.parse( localStorage.getItem("logged")).roleName) );
-      
         this.router.navigate(['/manager']);
       }else if( (JSON.parse( sessionStorage.getItem("userName") ) === "Admin") 
-      // || JSON.parse( localStorage.getItem("logged")).roleName === "Admin" 
+       || localStorage.length > 0 
       ){
         
         this.router.navigate(['/admin']);
 
       }
       else if( (JSON.parse( sessionStorage.getItem("userName") ) === "Employee") 
-      //|| JSON.parse( localStorage.getItem("logged")).roleName === "Employee" 
+      || localStorage.length > 0
+      //JSON.parse( localStorage.getItem("logged")).roleName === "Employee" 
       ){
         this.router.navigate(['/employee']);
       }
@@ -59,12 +59,10 @@ export class LoginComponent implements OnInit {
 
          if( this.checkbox === true  ){
            localStorage.setItem("logged",JSON.stringify( this.logged ));
-           console.log(JSON.parse( localStorage.getItem("logged")).roleName);
+           localStorage.setItem("loginRole",JSON.stringify( this.logged.roleName ));
          }
-
-
          if( this.logged.roleName === "Admin" ){
-           
+          console.log(this.logged);
           sessionStorage.setItem("userName", JSON.stringify( this.logged.roleName ));
           
 <<<<<<< HEAD
@@ -82,7 +80,7 @@ export class LoginComponent implements OnInit {
          }else{
           this.router.navigate(['/login']);
          }
-
+        
       }
   }
 

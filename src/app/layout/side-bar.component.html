@@ -4,29 +4,70 @@
       <header>
         <a href="#">Employee Task Manager</a>
       </header>
-      <ul class="nav mt-3 ">
-        <li>
+
+      <!-- Side list for Admin -->
+      <ul class="nav mt-5" *ngIf="userName === 'Admin'; else mBlock" >
+        <li class="mt-2">
           <a href="#">
             <i class="zmdi zmdi-calendar mt-3 "></i>Profile
           </a>
         </li>
-        <li>
+        <li class="mt-2">
           <a href="#">
             <i class="zmdi zmdi-view-dashboard mt-3 "></i> Add
           </a>
         </li>
-        <li>
+        <li class="mt-2">
           <a href="#">
-            <i class="zmdi zmdi-link mt-3 "></i> Update
+            <i class="zmdi zmdi-link mt-3 "></i> List
           </a>
         </li>
-        <li>
-          <a href="#">
-            <i class="zmdi zmdi-widgets"></i>Delete
-          </a>
-        </li>
-
-
       </ul>
+      <!-- Side List for Manager -->
+      <ng-template #mBlock>
+      <ul class="nav mt-3" *ngIf="userName === 'Manager'; else eBlock" >
+        <li class="mt-2">
+          <a href="#">
+            <i class="zmdi zmdi-calendar mt-3 "></i>Profile
+          </a>
+        </li>
+        <li class="mt-2">
+          <a href="#">
+            <i class="zmdi zmdi-view-dashboard mt-3 "></i> Projects
+          </a>
+        </li>
+        <li class="mt-2">
+          <a href="#">
+            <i class="zmdi zmdi-link mt-3 "></i> Create Project
+          </a>
+        </li>
+        <li class="mt-2">
+          <a href="#">
+            <i class="zmdi zmdi-link mt-3 "></i> Leaves
+          </a>
+        </li>
+      </ul>
+    </ng-template>
+
+    <!-- Side list for Employee -->
+    <ng-template #eBlock>
+      <ul class="nav mt-3" *ngIf="userName === 'Employee';" >
+        <li class="mt-2">
+          <a href="#">
+            <i class="zmdi zmdi-calendar mt-3 "></i>Profile
+          </a>
+        </li>
+        <li class="mt-2">
+          <a href="#">
+            <i class="zmdi zmdi-view-dashboard mt-3 "></i> Project
+          </a>
+        </li>
+        <li class="mt-2">
+          <a href="#">
+            <i class="zmdi zmdi-link mt-3 "></i> Leaves
+          </a>
+        </li>
+      </ul>
+    </ng-template>
     </div>
   </div>
