@@ -8,6 +8,8 @@ import { LoginComponent } from './login/login.component';
 import { AssignProjectComponent } from './manager/assign-project/assign-project.component';
 import { AddComponent } from './admin/add/add.component';
 import { ErrorPageComponent } from './error-page/error-page.component';
+import { LeaveComponent } from './manager/leave/leave.component';
+
 
 const routes: Routes = [
 
@@ -21,7 +23,7 @@ const routes: Routes = [
     {path : "add" , redirectTo:"add", pathMatch :"full" },
     {path : "add" , component: AddComponent }
   ]},
-
+   {path:"leaveresp",component:LeaveComponent},
   {path : "manager/assign-project", component: AssignProjectComponent},
   // {path : "admin/add" , component: AddComponent},
   {path:"manager", component : ManagerComponent },
@@ -35,4 +37,4 @@ const routes: Routes = [
 export class AppRoutingModule { 
   
 }
-export const routeComponents = [LoginComponent,EmployeeComponent,AdminComponent,ManagerComponent,AssignProjectComponent,AddComponent,ErrorPageComponent];
+export const routeComponents = [LoginComponent,EmployeeComponent,AdminComponent,ManagerComponent,AssignProjectComponent,AddComponent,ErrorPageComponent,LeaveComponent];
