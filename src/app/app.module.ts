@@ -12,6 +12,7 @@ import { RouterModule } from '@angular/router';
 import { AssignProjectComponent } from './manager/assign-project/assign-project.component';
 import { AddComponent } from './admin/add/add.component';
 import { ErrorPageComponent } from './error-page/error-page.component';
+import { LeaveComponent } from './manager/leave/leave.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { ErrorPageComponent } from './error-page/error-page.component';
     AssignProjectComponent,
     AddComponent,
     ErrorPageComponent,
+    LeaveComponent,
 
   ],
   imports: [
