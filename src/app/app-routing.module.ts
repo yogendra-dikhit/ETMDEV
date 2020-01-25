@@ -9,7 +9,6 @@ import { AssignProjectComponent } from './manager/assign-project/assign-project.
 import { AddComponent } from './admin/add/add.component';
 import { ErrorPageComponent } from './error-page/error-page.component';
 
-
 const routes: Routes = [
 
   {path:"", pathMatch:'full', component: LoginComponent},
