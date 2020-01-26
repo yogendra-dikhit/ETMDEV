@@ -29,7 +29,7 @@ const routes: Routes = [
   {path : "manager/assign-module", component: AssignModuleComponent},
    {path:"manager/leaveresp",component:LeaveComponent},
   {path : "manager/assign-project", component: AssignProjectComponent},
-  // {path : "admin/add" , component: AddComponent},
+
   {path:"manager", component : ManagerComponent },
   {path : "**", component : ErrorPageComponent}
 ];
