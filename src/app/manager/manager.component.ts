@@ -3,13 +3,8 @@ import { ActivatedRoute , Router } from '@angular/router';
 
 @Component({
   selector: 'app-manager',
-<<<<<<< HEAD
-  template: './manager.component.html',
-  styles: ['./manager.component.css']
-=======
   templateUrl: './manager.component.html',
   styleUrls: ['./manager.component.css']
->>>>>>> 77b29462afdcc8905fe80ee376e5d444d9a25b2c
 })
 
 export class ManagerComponent implements OnInit {
