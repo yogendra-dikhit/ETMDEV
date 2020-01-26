@@ -13,9 +13,13 @@
                       </div>
                       
                       <div class="form-group">
-                        <label for="from" class="text h5">Project-description</label><br>
+                        <label for="from" class="text h5">Leave-description</label><br>
                         <input type="text" name="from" id="from" class="form-control" >
                     </div>
+                    <div class="form-group">
+                      <label for="from" class="text h5">Leave-Type</label><br>
+                      <input type="text" name="from" id="from" class="form-control" >
+                  </div>
 
                       <div class="form-group">
                           <label for="to" class="text h5">Start date</label><br>
@@ -26,11 +30,20 @@
                         <label for="employeeId" class="text h5">End date</label><br>
                         <input type="text" name="employeeId" id="employeeId" class="form-control"placeholder="dd/mm/yyyy"  >
                       </div>
-                      
+                      <div class="col-md-4">
+                        <select class="custom-select d-block w-100" id="state" required>
+                          <option value="">Choose...</option>
+                          <option>Approve</option>
+                          <option>Reject</option>
+                        
+                          </select>
+                    </div>
                     <div class="form-group" style="display: grid; justify-content: center;">
-                      <input type="submit" name="next" class="btn btn-success btn-md   " value="Next">
+                      <input type="submit" name="next" class="btn btn-success btn-md   " value="Submit">
                    
                     </div>
+                    
+
                       </form>
                       
                       </div>

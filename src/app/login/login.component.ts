@@ -65,14 +65,9 @@ export class LoginComponent implements OnInit {
           console.log(this.logged);
           sessionStorage.setItem("userName", JSON.stringify( this.logged.roleName ));
           
-<<<<<<< HEAD
-           this.router.navigate(['/admin']);
-         }else if( this.logged.roleName === "Manager"){
-=======
           this.router.navigate(['/admin']);
          }else if( this.logged.roleName === "Manager" ){
           sessionStorage.setItem("userName", JSON.stringify( this.logged.roleName ));
->>>>>>> 77b29462afdcc8905fe80ee376e5d444d9a25b2c
            this.router.navigate(['/manager']);
          }else if( this.logged.roleName === "Employee"){
           sessionStorage.setItem("userName", JSON.stringify( this.logged.roleName ));

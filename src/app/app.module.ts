@@ -14,6 +14,7 @@ import { AddComponent } from './admin/add/add.component';
 import { ErrorPageComponent } from './error-page/error-page.component';
 import { LeaveComponent } from './manager/leave/leave.component';
 import { AssignModuleComponent } from './manager/assign-module/assign-module.component';
+import { LeavelistComponent } from './manager/leavelist/leavelist.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { AssignModuleComponent } from './manager/assign-module/assign-module.com
     ErrorPageComponent,
     LeaveComponent,
     AssignModuleComponent,
+    LeavelistComponent,
 
   ],
   imports: [
