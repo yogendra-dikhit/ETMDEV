@@ -11,7 +11,9 @@ import { ErrorPageComponent } from './error-page/error-page.component';
 import { LeaveComponent } from './manager/leave/leave.component';
 import { AssignModuleComponent } from './manager/assign-module/assign-module.component';
 import { LeavelistComponent } from './manager/leavelist/leavelist.component';
-
+import {ProfileComponent}  from './manager/profile/profile.component';
+import { ProjectdescComponent } from './projectdesc/projectdesc.component';
+import { ProjectdispComponent } from './projectdisp/projectdisp.component';
 
 const routes: Routes = [
 
@@ -25,6 +27,9 @@ const routes: Routes = [
     {path : "add" , redirectTo:"add", pathMatch :"full" },
     {path : "add" , component: AddComponent }
   ]},
+  {path:"manager/projectdisp",component:ProjectdispComponent},
+  {path:"manager/projectdesc",component:ProjectdescComponent},
+  {path:"manager/profile",component:ProfileComponent},
   {path:"manager/leavelist",component:LeavelistComponent},
   {path : "manager/assign-module", component: AssignModuleComponent},
    {path:"manager/leaveresp",component:LeaveComponent},
@@ -41,4 +46,4 @@ const routes: Routes = [
 export class AppRoutingModule { 
   
 }
-export const routeComponents = [LoginComponent,EmployeeComponent,AdminComponent,ManagerComponent,AssignProjectComponent,AddComponent,ErrorPageComponent,LeaveComponent,AssignModuleComponent,LeavelistComponent];
+export const routeComponents = [LoginComponent,EmployeeComponent,AdminComponent,ManagerComponent,AssignProjectComponent,AddComponent,ErrorPageComponent,LeaveComponent,AssignModuleComponent,LeavelistComponent,ProfileComponent,ProjectdescComponent,ProjectdispComponent];

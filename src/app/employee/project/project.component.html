@@ -1,0 +1,53 @@
+<head><link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+ </head>
+ <div id="project">
+  <div class="row  ">
+      <div class="col-md-12">
+          <div class="form_main  ">
+                  <h1  class="row text-dark justify-content-center  align-items-center" style="height: 100px; display: grid;"><strong>Project </strong>  </h1>
+          </div> <br>
+      </div>
+  </div>
+  <div class="container ">
+    <div id="work-row" class="row justify-content-center align-items-center" >
+        <div id="work-column" class="col-md-6" style="background-color: snow">
+            <div id="work-box" class="col-md-12" style="background-color: snow;">
+  <form >
+    <div class="form-group">
+      <label for="project_id">Project_id:</label>
+      <input type="text" formControlName="project_id"  name="project_id" class="form-control" id="project_id">
+    </div>
+
+    <div class="form-group">
+      <label for="project_title">Project Title:</label>
+      <input type="text" formControlName="project_title"  name="project_title" class="form-control" id="project_title">
+    </div>
+
+    <div class="form-group">
+      <label for="start">Start Date:</label>
+      <input  type="date" formControlName="start"  name="start" class="form-control" id="start">
+    </div>
+
+    <div class="form-group">
+      <label for="end">End Date:</label>
+      <input  type="date" formControlName="end"  name="end" class="form-control" id="end">
+    </div>
+
+
+    <div class="form-group">
+        <label for="project_desc">Project Description:</label>
+        <textarea name="" id="" cols="30" rows="10" type="text" formControlName="project_desc"  name="project_desc" class="form-control" id="project_desc"></textarea>
+      </div>
+
+    <div class="form-group">
+      <label for="module_name">Module Name:</label>
+      <input  type="text" formControlName="module_name"  name="module_name" class="form-control" id="module_name">
+    </div>
+
+    
+    <button class="btn btn-success">Update</button>
+  </form>
+</div>
+</div>
+    </div>
+  </div>

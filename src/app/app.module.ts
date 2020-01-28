@@ -15,6 +15,9 @@ import { ErrorPageComponent } from './error-page/error-page.component';
 import { LeaveComponent } from './manager/leave/leave.component';
 import { AssignModuleComponent } from './manager/assign-module/assign-module.component';
 import { LeavelistComponent } from './manager/leavelist/leavelist.component';
+import { ProfileComponent } from './manager/profile/profile.component';
+import { ProjectdescComponent } from './projectdesc/projectdesc.component';
+import { ProjectdispComponent } from './projectdisp/projectdisp.component';
 
 
 @NgModule({
@@ -30,6 +33,9 @@ import { LeavelistComponent } from './manager/leavelist/leavelist.component';
     LeaveComponent,
     AssignModuleComponent,
     LeavelistComponent,
+    ProfileComponent,
+    ProjectdescComponent,
+    ProjectdispComponent,
    
 
   ],

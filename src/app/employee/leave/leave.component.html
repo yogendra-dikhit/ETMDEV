@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Leave Page</title>
+  
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+
+</head>
+
+
+<body>
+    <div id="leave">
+        <div class="row  ">
+            <div class="col-md-12">
+                <div class="form_main  ">
+                        <h1  class="row text-dark justify-content-center  align-items-center" style="height: 100px; display: grid;"><strong>Leave Request Page </strong>  </h1>
+                </div> <br>
+            </div>
+        </div>
+      
+        <div class="container  " >
+            <div id="leave-row" class="row justify-content-center align-items-center" >
+                <div id="leave-column" class="col-md-6" style="background-color: snow">
+                    <div id="leave-box" class="col-md-12" style="background-color: snow;">
+                        <form id="leave-form" class="form" action="" method="post">
+                         
+                            <div class="form-group">
+                                <label for="leaveid" class="text  h5">LeaveId</label><br>
+                                <input type="text" name="leaveid" id="leaveid" class="form-control" >
+                            </div>
+                            <div class="form-group">
+                                <label for="leavetype" class="text h5">Leave Type</label><br>
+                                <select class="form-control" id="leavetype">
+                                    <option>Select</option>
+                                    <option>Medical Leave</option>
+                                    <option>Casual Leave</option>
+                                    <option>Maternity Leave</option>
+                                    <option>Paternity Leave</option>
+                                    <option>Transfer Leave</option>
+                                  </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="leaveused" class="text  h5">Leave Used</label><br>
+                                <input type="text"   name="leaveused" id="leaveused" class="form-control" >
+                            </div>
+                            <div class="form-group">
+                                <label for="from" class="text h5">From</label><br>
+                                <input type="date" name="from" id="from" class="form-control" placeholder="dd/mm/yyyy" >
+                            </div>
+                            <div class="form-group">
+                                <label for="to" class="text h5">To</label><br>
+                                <input type="date" name="to" id="to" class="form-control"  placeholder="dd/mm/yyyy" >
+                            </div>
+
+                            <div class="form-group">
+                              <label for="employeeId" class="text h5">EmployeeId</label><br>
+                              <input type="text" name="employeeId" id="employeeId" class="form-control" >
+                            </div>
+
+                            <div class="form-group">
+                                <label for="leavedesc" class="text h5">Leave Description</label><br>
+                                <textarea  cols="10" rows="10" type="text" name="leavedesc" id="leavedesc" class="form-control" ></textarea>
+                              </div>
+                              
+                            
+
+                            <div class="form-group">
+                              <input type="submit" name="submit" class="btn btn-primary btn-md   " value="Request" (click)="onDecrement()">
+                              <input type="reset" name="submit" class="btn btn-danger btn-md   " value="Clear">
+                            </div>
+                            
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
